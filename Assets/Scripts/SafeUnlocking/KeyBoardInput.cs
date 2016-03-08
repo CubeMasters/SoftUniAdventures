@@ -1,24 +1,22 @@
 ﻿using UnityEngine;
-using System.Collections;
-using System.Net.Mime;
 using UnityEngine.UI;
 
 public class KeyBoardInput : MonoBehaviour
 {           
-    public Text result;                                    
+    public Text Result;                                    
 
     private Text textComponent;
                     
     void Start()
     {
-        textComponent = this.GetComponentInChildren<Text>();
+        this.textComponent = this.GetComponentInChildren<Text>();
     }
 
     public void AddDigitToResult()
     {
-        if (this.result.text.Length <= 10)
+        if (this.Result.text.Length <= 10)
         {                                                
-            this.result.text = this.result.text + textComponent.text;
+            this.Result.text = this.Result.text + this.textComponent.text;
         }
     }
 }

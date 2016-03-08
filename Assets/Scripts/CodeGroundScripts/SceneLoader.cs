@@ -23,11 +23,19 @@ public class SceneLoader : MonoBehaviour
             {
                 if (hit.collider.gameObject.transform.tag == "RiddleBook")
                 {
-                    SceneManager.LoadScene("BookRiddles", LoadSceneMode.Single);
+                    SceneManager.LoadScene("BookRiddles");
                 }
                 else if (hit.collider.gameObject.transform.tag == "CircuitBreaker")
                 {
-                    SceneManager.LoadScene("FuseGame", LoadSceneMode.Single);
+                    SceneManager.LoadScene("FuseGame");
+                }
+                else if (hit.collider.gameObject.transform.tag == "SafeGame")
+                {
+                    SceneManager.LoadScene("backPackScene");
+                }
+                else if (hit.collider.gameObject.transform.tag == "TyperNarGame")
+                {
+                    SceneManager.LoadScene("game");
                 }
             }
         }

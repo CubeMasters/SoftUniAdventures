@@ -1,30 +1,30 @@
 ﻿using UnityEngine;
-using System.Collections;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class OtherUserInput : MonoBehaviour
 {
-    public Text result;
+    public Text Result;
     private const string ExpectedResult = "67796869";
 
     public void Submit()
     {
-        if (this.result.text == ExpectedResult)
+        if (this.Result.text == ExpectedResult)
         {
-            this.result.color = Color.green;
-            Debug.Log("Bravo be!");
+            this.Result.color = Color.green;
+            SceneManager.LoadScene("CodeGround");
         }
         else
         {
-            this.result.color = Color.red;
+            this.Result.color = Color.red;
         }  
     }
 
     public void DeleteALetter()
     {
-        if (result.text.Length > 0)
+        if (this.Result.text.Length > 0)
         {
-            result.text = result.text.Substring(0, result.text.Length - 1);
+            this.Result.text = this.Result.text.Substring(0, this.Result.text.Length - 1);
         }
     }
 }
