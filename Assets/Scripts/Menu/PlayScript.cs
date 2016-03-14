@@ -13,9 +13,6 @@ public class PlayScript : MonoBehaviour
 	// Update is called once per frame
 	void Update () 
 	{
-		if(GUI.Button == Button1)
-		{
-			Application.Quit();
-		}
+	
 	}
 }

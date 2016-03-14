@@ -6,11 +6,15 @@ public class GameMaster : MonoBehaviour
 {
     public static GameMaster GM;
     public static int GamesCompleted = 0;
+    
+
+    void Start()
+    {     
+
+    }
 
     void Awake()
     {
-
-
         if (GM != null)
         {
             Destroy(GM);
