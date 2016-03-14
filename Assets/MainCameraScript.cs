@@ -14,7 +14,7 @@ public class MainCameraScript : MonoBehaviour {
         hinterPanel.SetActive(true);
         hintsGiver.SetWantedAdviceSet("InitialAdviceSet");
         this.mainCamera = this.GetComponent<Camera>();
-        this.mainCamera.farClipPlane = 15;
+        //this.mainCamera.farClipPlane = 12;
     }
 	
 	// Update is called once per frame
