@@ -4,6 +4,11 @@ using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour {
 
+    void Start()
+    {
+        Screen.orientation = ScreenOrientation.Portrait;
+    }
+
     public void Replay()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
@@ -11,6 +16,6 @@ public class UIManager : MonoBehaviour {
 
     public void BackToGame()
     {
-        Debug.Log("Implement going back to other scene!");
+        SceneManager.LoadScene("CodeGround", LoadSceneMode.Single);
     }
 }

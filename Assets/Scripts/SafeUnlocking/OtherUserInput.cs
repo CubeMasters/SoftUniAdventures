@@ -11,6 +11,11 @@ public class OtherUserInput : MonoBehaviour
 
     private const string ExpectedResult = "67796869";
 
+    void Start()
+    {
+        Screen.orientation = ScreenOrientation.Landscape;
+    }
+
     public void Submit()
     {
         if (this.Result.text == ExpectedResult)

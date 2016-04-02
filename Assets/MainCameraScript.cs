@@ -14,11 +14,8 @@ public class MainCameraScript : MonoBehaviour {
     {
         hinterPanel.SetActive(true);
         hintsGiver.SetWantedAdviceSet(AdviceSets.FirstStartOfGameSet);
-        this.mainCamera = this.GetComponent<Camera>();  
+        this.mainCamera = this.GetComponent<Camera>();
+        Screen.orientation = ScreenOrientation.Landscape;
     }
-	
-	// Update is called once per frame
-	void Update () {
-	
-	}
+	            
 }

@@ -151,11 +151,11 @@ public class HintsGiverScript : MonoBehaviour
         this.currentMsg++;
         if (currentMsg == 0)
         {
-            this.textBoxOfHinter.text = "";
+            this.textBoxOfHinter.text = "Consider searching for the standart encoding table.";
         }
         else if (currentMsg == 1)
         {
-            this.textBoxOfHinter.text = "";
+            this.textBoxOfHinter.text = "Have you found the ASCII table?";
         }
         else
         {

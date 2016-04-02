@@ -46,8 +46,6 @@ public class CountDownScript : MonoBehaviour
                 this.timerText.text = timer.ToString("f2");
 
                 this.hasGameFinished = true;
-
-                SceneManager.LoadScene("CodeGround");
             }
             else
             {
