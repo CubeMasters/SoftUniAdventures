@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Assets.Scripts;
 
 public class MainCameraScript : MonoBehaviour {
 
@@ -12,9 +13,8 @@ public class MainCameraScript : MonoBehaviour {
     void Start ()
     {
         hinterPanel.SetActive(true);
-        hintsGiver.SetWantedAdviceSet("InitialAdviceSet");
-        this.mainCamera = this.GetComponent<Camera>();
-        //this.mainCamera.farClipPlane = 12;
+        hintsGiver.SetWantedAdviceSet(AdviceSets.FirstStartOfGameSet);
+        this.mainCamera = this.GetComponent<Camera>();  
     }
 	
 	// Update is called once per frame

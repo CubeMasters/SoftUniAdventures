@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Assets.Scripts;
 using UnityEngine.UI;
 
 public class FibonacciChecker : MonoBehaviour
@@ -7,6 +8,8 @@ public class FibonacciChecker : MonoBehaviour
 
     public InputField InputField;
     public GameStateManager GameStateManager;
+    public GameObject masterHinter;
+    public HintsGiverScript masterHinterScript;
     // Use this for initialization
     void Start () {
 	
@@ -21,5 +24,10 @@ public class FibonacciChecker : MonoBehaviour
             this.InputField.gameObject.SetActive(false);
         
         }
+    }
+    public void ShowFibbonacciHint()
+    {
+        this.masterHinter.SetActive(true);
+        this.masterHinterScript.SetWantedAdviceSet(AdviceSets.FibbonacciHintSet);
     }
 }

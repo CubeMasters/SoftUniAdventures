@@ -1,10 +1,14 @@
-﻿using UnityEngine;
+﻿using Assets.Scripts;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class OtherUserInput : MonoBehaviour
 {
     public Text Result;
+    public GameObject hinterPanel;
+    public HintsGiverScript HinterGiverScript;
+
     private const string ExpectedResult = "67796869";
 
     public void Submit()
@@ -17,7 +21,7 @@ public class OtherUserInput : MonoBehaviour
         else
         {
             this.Result.color = Color.red;
-        }  
+        }
     }
 
     public void DeleteALetter()
@@ -26,5 +30,16 @@ public class OtherUserInput : MonoBehaviour
         {
             this.Result.text = this.Result.text.Substring(0, this.Result.text.Length - 1);
         }
+    }
+
+    public void BackToGame()
+    {
+        SceneManager.LoadScene("CodeGround", LoadSceneMode.Single);
+    }
+
+    public void DisplayHintSet()
+    {
+        this.hinterPanel.SetActive(true);
+        this.HinterGiverScript.SetWantedAdviceSet(AdviceSets.ASCIIHintSet);
     }
 }

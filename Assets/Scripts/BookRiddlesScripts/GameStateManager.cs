@@ -10,8 +10,7 @@ public class GameStateManager : MonoBehaviour
 	// Use this for initialization
 	void Start ()
 	{
-	    Screen.orientation = ScreenOrientation.Landscape;
-
+	    Screen.orientation = ScreenOrientation.Landscape;         
 	}
 	
 	// Update is called once per frame
@@ -22,4 +21,9 @@ public class GameStateManager : MonoBehaviour
 	        SceneManager.LoadScene("CodeGround", LoadSceneMode.Single);
 	    }
 	}
+
+    public void BackToGame()
+    {
+        SceneManager.LoadScene("CodeGround", LoadSceneMode.Single);
+    }
 }

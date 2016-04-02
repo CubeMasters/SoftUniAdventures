@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using Assets.Scripts;
+using UnityEngine;
 using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
@@ -10,6 +11,8 @@ public class Calculator : MonoBehaviour
     public Light GreenLight;
     public Text textbox;
 
+    public GameObject hinterPanel;
+    public HintsGiverScript hinterScript;
 
     private bool isFinished = false;
 
@@ -22,7 +25,6 @@ public class Calculator : MonoBehaviour
         this.RequiredVoltage = Random.Range(0, 256);
         this.textbox.text = string.Format("{0}", this.RequiredVoltage);
     }
-
 
     void FixedUpdate()
     {
@@ -62,5 +64,16 @@ public class Calculator : MonoBehaviour
 
         }
 
+    }
+
+    public void SetBitHint()
+    {
+        this.hinterPanel.SetActive(true);
+        this.hinterScript.SetWantedAdviceSet(AdviceSets.BitManipSet);
+    }
+
+    public void BackToGame()
+    {
+        SceneManager.LoadScene("CodeGround", LoadSceneMode.Single);
     }
 }
